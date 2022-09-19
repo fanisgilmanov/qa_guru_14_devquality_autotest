@@ -3,6 +3,7 @@ package tests;
 import com.codeborne.selenide.Selenide;
 import helpers.DriverUtils;
 import org.junit.jupiter.api.DisplayName;
+import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
 
 import static com.codeborne.selenide.CollectionCondition.texts;
@@ -13,6 +14,8 @@ import static com.codeborne.selenide.Selenide.*;
 import static com.codeborne.selenide.WebDriverConditions.url;
 import static io.qameta.allure.Allure.step;
 import static org.assertj.core.api.AssertionsForClassTypes.assertThat;
+
+
 
 public class DevQualityTest extends BaseTest {
 
