@@ -26,14 +26,12 @@ public class BaseTest {
         capabilities.setCapability("enableVideo", true);
 
         Configuration.browserCapabilities = capabilities;
-        Configuration.baseUrl = config.baseUrl();
         Configuration.browser = System.getProperty("browser", "chrome");
         Configuration.browserSize = System.getProperty("browserSize","1920x1080");
         Configuration.browserVersion = System.getProperty("browserVersion", "100");
         Configuration.remote = format("https://%s:%s@%s",
                 config.login(), config.password(), config.remoteUrlSelenoid());
 
-        Selenide.open("http://devquality.ru/");
 
     }
 
