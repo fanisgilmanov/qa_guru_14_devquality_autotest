@@ -24,7 +24,7 @@ public class DevQualityTest extends BaseTest {
     @DisplayName("Проверка локализации")
     void localizationCheckTest() {
         step("Открываем страницу", () -> {
-            Selenide.open("http://devquality.ru/");
+            Selenide.open("http://devquality.ru/ru");
         });
 
         step("Наводим на иконку переключения языка", () -> {
@@ -51,7 +51,7 @@ public class DevQualityTest extends BaseTest {
     void formOpeningTest() {
 
         step("Открываем страницу", () -> {
-            Selenide.open("http://devquality.ru/");
+            Selenide.open("http://devquality.ru/ru");
         });
 
         step("Открытие формы через кнопку в баннере", () -> {
@@ -76,13 +76,13 @@ public class DevQualityTest extends BaseTest {
     @DisplayName("Проверка перехода по иконке Telegram")
     void openTelegramTest() {
         step("Открываем страницу", () -> {
-            Selenide.open("http://devquality.ru/");
+            Selenide.open("http://devquality.ru/ru");
         });
 
         step("Открытие Telegram", () -> {
             $$(".social__list a").get(0).shouldBe(visible).click();
             webdriver().shouldHave(url("https://t.me/kostyaitsme"));
-            Selenide.open("http://devquality.ru/");
+            Selenide.open("http://devquality.ru/ru");
         });
     }
 
@@ -90,14 +90,14 @@ public class DevQualityTest extends BaseTest {
     @DisplayName("Проверка перехода по иконке WhatSapp")
     void openWhatSappTest() {
         step("Открываем страницу", () -> {
-            Selenide.open("http://devquality.ru/");
+            Selenide.open("http://devquality.ru/ru");
         });
 
         step("Открытие WhatSapp", () -> {
             $$(".social__list a").get(1).shouldBe(visible).click();
             webdriver().shouldHave(url("https://api.whatsapp.com/send/?phone=79168668724&text&" +
                     "type=phone_number&app_absent=0"));
-            Selenide.open("http://devquality.ru/");
+            Selenide.open("http://devquality.ru/ru");
         });
     }
 
@@ -105,13 +105,13 @@ public class DevQualityTest extends BaseTest {
     @DisplayName("Проверка перехода по иконке Skype")
     void openSkypeTest() {
         step("Открываем страницу", () -> {
-            Selenide.open("http://devquality.ru/");
+            Selenide.open("http://devquality.ru/ru");
         });
 
         step("Открытие WhatSapp", () -> {
             $$(".social__list a").get(2).shouldBe(visible).click();
             webdriver().shouldHave(url("https://join.skype.com/invite/ogAeInJLABXk"));
-            Selenide.open("http://devquality.ru/");
+            Selenide.open("http://devquality.ru/ru");
         });
     }
 
@@ -119,7 +119,7 @@ public class DevQualityTest extends BaseTest {
     @DisplayName("Проверка консоля на ошибки")
     void consoleShouldNotHaveErrorsTest() {
         step("Открываем страницу", () -> {
-            Selenide.open("http://devquality.ru/");
+            Selenide.open("http://devquality.ru/ru");
         });
 
         step("Проверяем консоль на текст ошибки: 'SEVERE'", () -> {
