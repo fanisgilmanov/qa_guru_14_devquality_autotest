@@ -33,6 +33,8 @@ public class BaseTest {
         Configuration.remote = format("https://%s:%s@%s",
                 config.login(), config.password(), config.remoteUrlSelenoid());
 
+        Selenide.open("http://devquality.ru/");
+
     }
 
     @AfterEach
