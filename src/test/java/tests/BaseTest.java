@@ -27,8 +27,7 @@ public class BaseTest {
 
         Configuration.browserCapabilities = capabilities;
 
-        Configuration.baseUrl=  System.getProperty("baseUrl", "http://devquality.ru/");
-        Selenide.open(baseUrl);
+        Selenide.open("http://devquality.ru");
         Configuration.browser = System.getProperty("browser", "chrome");
         Configuration.browserSize = System.getProperty("browserSize","1920x1080");
         Configuration.browserVersion = System.getProperty("browserVersion", "100");
