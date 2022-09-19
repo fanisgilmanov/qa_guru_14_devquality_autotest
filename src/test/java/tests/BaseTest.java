@@ -11,6 +11,7 @@ import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeAll;
 import org.openqa.selenium.remote.DesiredCapabilities;
 
+import static com.codeborne.selenide.Configuration.baseUrl;
 import static java.lang.String.format;
 
 public class BaseTest {
@@ -25,7 +26,8 @@ public class BaseTest {
         capabilities.setCapability("enableVideo", true);
 
         Configuration.browserCapabilities = capabilities;
-        Configuration.baseUrl = System.getProperty("baseUrl", "http://devquality.ru/");
+        baseUrl = System.getProperty("baseUrl", "http://devquality.ru/");
+        Selenide.open(baseUrl);
         Configuration.browser = System.getProperty("browser", "chrome");
         Configuration.browserSize = System.getProperty("browserSize","1920x1080");
         Configuration.browserVersion = System.getProperty("browserVersion", "100");
