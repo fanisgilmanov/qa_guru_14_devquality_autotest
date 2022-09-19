@@ -16,7 +16,6 @@ import static io.qameta.allure.Allure.step;
 import static org.assertj.core.api.AssertionsForClassTypes.assertThat;
 
 
-
 public class DevQualityTest extends BaseTest {
 
 
@@ -81,7 +80,10 @@ public class DevQualityTest extends BaseTest {
 
         step("Открытие Telegram", () -> {
             $$(".social__list a").get(0).shouldBe(visible).click();
-            webdriver().shouldHave(url("https://t.me/kostyaitsme"));
+            webdriver().shouldHave(url("https://t.me/kostyaitsme")).equals(true);
+
+        });
+        step("Возвращаемся обратно", () -> {
             Selenide.open("http://devquality.ru/ru");
         });
     }
@@ -97,6 +99,8 @@ public class DevQualityTest extends BaseTest {
             $$(".social__list a").get(1).shouldBe(visible).click();
             webdriver().shouldHave(url("https://api.whatsapp.com/send/?phone=79168668724&text&" +
                     "type=phone_number&app_absent=0"));
+        });
+        step("Возвращаемся обратно", () -> {
             Selenide.open("http://devquality.ru/ru");
         });
     }
@@ -108,9 +112,11 @@ public class DevQualityTest extends BaseTest {
             Selenide.open("http://devquality.ru/ru");
         });
 
-        step("Открытие WhatSapp", () -> {
+        step("Открытие Skype", () -> {
             $$(".social__list a").get(2).shouldBe(visible).click();
             webdriver().shouldHave(url("https://join.skype.com/invite/ogAeInJLABXk"));
+        });
+        step("Возвращаемся обратно", () -> {
             Selenide.open("http://devquality.ru/ru");
         });
     }
