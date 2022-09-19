@@ -26,7 +26,8 @@ public class BaseTest {
         capabilities.setCapability("enableVideo", true);
 
         Configuration.browserCapabilities = capabilities;
-        baseUrl = System.getProperty("baseUrl", "http://devquality.ru/");
+
+        Configuration.baseUrl=  System.getProperty("baseUrl", "http://devquality.ru/");
         Selenide.open(baseUrl);
         Configuration.browser = System.getProperty("browser", "chrome");
         Configuration.browserSize = System.getProperty("browserSize","1920x1080");
