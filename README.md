@@ -37,7 +37,7 @@
 
 ## <img src="images/logo/Jenkins.svg" width="25" height="25"  alt="Jenkins"/></a> Jenkins <a target="_blank" href="https://jenkins.autotests.cloud/job/IBS_test/"> job </a>
 <p align="center">
-<a href="https://jenkins.autotests.cloud/job/qa_guru_14_Allure_Jira_Telegram//"><img src="images/screens/jenkins project.PNG" alt="Jenkins"/></a>
+<a href="https://jenkins.autotests.cloud/job/qa_guru_14_Allure_Jira_Telegram//"><img src="images/screens/jenkins project.png" alt="Jenkins"/></a>
 </p>
 
 ## 🧙: Параметры сборки в Jenkins:
