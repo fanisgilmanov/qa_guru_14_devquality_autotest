@@ -25,3 +25,38 @@
 <a href="https://github.com/allure-framework/allure2"><img src="images/logo/Allure.svg" width="50" height="50"  alt="Allure"/></a>
 <a href="https://www.jenkins.io/"><img src="images/logo/Jenkins.svg" width="50" height="50"  alt="Jenkins"/></a>
 </p>
+
+## ⚓: Реализованные проверки
+
+Проверка локализации
+Проверка полей у формы обратной связи
+Проверка перехода по иконке Telegram
+Проверка перехода по иконке WhatSapp
+Проверка перехода по иконке Skype
+Проверка консоля на ошибки
+
+## <img src="images/logo/Jenkins.svg" width="25" height="25"  alt="Jenkins"/></a> Jenkins <a target="_blank" href="https://jenkins.autotests.cloud/job/IBS_test/"> job </a>
+<p align="center">
+<a href="https://jenkins.autotests.cloud/job/qa_guru_14_Allure_Jira_Telegram//"><img src="images/screens/jenkins.PNG" alt="Jenkins"/></a>
+</p>
+
+## 🧙: Параметры сборки в Jenkins:
+
+- BROWSER (браузер, по умолчанию chrome)
+- VERSION (версия браузера, по умолчанию 100.0)
+- BROWSERSIZE (размер окна браузера, по умолчанию 1920x1080)
+
+## 🏗️: Запуск тестов из терминала
+Локальный запуск:
+```
+gradle clean test
+```
+
+Удаленный запуск:
+```
+clean
+test
+-Dbrowser=${BROWSER}
+-DbrowserSize=${BROWSERSIZE}
+-Dversion=${VERSION}
+```
