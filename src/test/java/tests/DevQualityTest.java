@@ -34,6 +34,7 @@ public class DevQualityTest extends BaseTest {
             $$(".header__langs a").find(text("en")).shouldBe(visible).click();
         });
 
+
         step("Проверяем изменение языка", () -> {
             $$(".banner__content h1").shouldHave(texts("Don't worry about your next release."));
         });
@@ -80,7 +81,7 @@ public class DevQualityTest extends BaseTest {
 
         step("Открытие Telegram", () -> {
             $$(".social__list a").get(0).shouldBe(visible).click();
-            webdriver().shouldHave(url("https://t.me/kostyaitsme")).equals(true);
+            webdriver().shouldHave(url("https://t.me/kostyaitsme"));
 
         });
         step("Возвращаемся обратно", () -> {
