@@ -60,3 +60,25 @@ test
 -DbrowserSize=${BROWSERSIZE}
 -Dversion=${VERSION}
 ```
+
+# ⛅: Основной отчет
+<p align="center">
+<img title="Allure Overview Dashboard" src="allure отчет.png">
+</p>
+
+
+## 🧪: Тесты
+<p align="center">
+<img title="Allure Tests" src="images/screens/тесты.png">
+</p>
+
+## <img src="images/logo/Telegram.svg" width="25" height="25"  alt="Allure"/></a> Уведомление в Telegram при помощи бота
+
+<p align="center">
+<img title="Allure Overview Dashboard" src="images/screens/telegram_bot.png" >
+</p>
+
+## <img src="images/logo/Selenoid.svg" width="25" height="25" alt="Jenkins"/></a> Видео <a target="_blank" href="https://selenoid.autotests.cloud/video/56a9a3a9a745926ecd5414e8efcf447e.mp4"> прохождения тестов </a>
+<p align="center">
+<a href="https://selenoid.autotests.cloud/video/56a9a3a9a745926ecd5414e8efcf447e.mp4"></a>
+</p>
