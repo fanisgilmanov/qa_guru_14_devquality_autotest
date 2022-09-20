@@ -20,7 +20,6 @@ public class BaseTest {
     @BeforeAll
     static void beforeUrl() {
         SelenideLogger.addListener("allure", new AllureSelenide());
-        Configuration.browserSize = "1920x1080";
         DesiredCapabilities capabilities = new DesiredCapabilities();
         capabilities.setCapability("enableVNC", true);
         capabilities.setCapability("enableVideo", true);
