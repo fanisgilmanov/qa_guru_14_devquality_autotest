@@ -1,16 +1,20 @@
 package tests;
 
+import com.codeborne.selenide.Conditional;
 import com.codeborne.selenide.Selenide;
 import helpers.DriverUtils;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
 
+import java.time.Duration;
+
 import static com.codeborne.selenide.CollectionCondition.texts;
 import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Condition.visible;
 import static com.codeborne.selenide.Selectors.byXpath;
 import static com.codeborne.selenide.Selenide.*;
+import static com.codeborne.selenide.WebDriverConditions.currentFrameUrl;
 import static com.codeborne.selenide.WebDriverConditions.url;
 import static io.qameta.allure.Allure.step;
 import static org.assertj.core.api.AssertionsForClassTypes.assertThat;
@@ -83,6 +87,9 @@ public class DevQualityTest extends BaseTest {
             $$(".social__list a").get(0).shouldBe(visible).click();
             webdriver().shouldHave(url("https://t.me/kostyaitsme"));
 
+        });
+        step("Закрываем alert окно", () -> {
+            $("html").pressEscape();
         });
         step("Возвращаемся обратно", () -> {
             Selenide.open("http://devquality.ru/ru");
