@@ -63,7 +63,7 @@ test
 
 # ⛅: Основной отчет
 <p align="center">
-<img title="Allure Overview Dashboard" src="allure отчет.png">
+<img title="Allure Overview Dashboard" src="images/screens/allure отчет.png">
 </p>
 
 
