@@ -6,6 +6,7 @@ import helpers.DriverUtils;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.TestMethodOrder;
 
 import java.time.Duration;
 
@@ -88,7 +89,7 @@ public class DevQualityTest extends BaseTest {
         });
 
         step("Закрываем alert окно", () -> {
-            $("html").pressEscape();
+           $("html").pressEscape();
         });
 
         step("Возвращаемся обратно", () -> {
