@@ -45,7 +45,6 @@ public class DevQualityTest extends BaseTest {
 
         step("Возвращаем русский язык", () -> {
             $(".header__content").hover().$$(".header__langs a").find(text("ru")).click();
-            ;
         });
 
     }
@@ -86,11 +85,12 @@ public class DevQualityTest extends BaseTest {
         step("Открытие Telegram", () -> {
             $$(".social__list a").get(0).shouldBe(visible).click();
             webdriver().shouldHave(url("https://t.me/kostyaitsme"));
-
         });
+
         step("Закрываем alert окно", () -> {
             $("html").pressEscape();
         });
+
         step("Возвращаемся обратно", () -> {
             Selenide.open("http://devquality.ru/ru");
         });
@@ -108,6 +108,7 @@ public class DevQualityTest extends BaseTest {
             webdriver().shouldHave(url("https://api.whatsapp.com/send/?phone=79168668724&text&" +
                     "type=phone_number&app_absent=0"));
         });
+
         step("Закрываем alert окно", () -> {
             $("html").pressEscape();
         });
@@ -128,6 +129,7 @@ public class DevQualityTest extends BaseTest {
             $$(".social__list a").get(2).shouldBe(visible).click();
             webdriver().shouldHave(url("https://join.skype.com/invite/ogAeInJLABXk"));
         });
+
         step("Закрываем alert окно", () -> {
             $("html").pressEscape();
         });
